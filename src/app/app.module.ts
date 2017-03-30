@@ -6,17 +6,23 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { DealerComponent } from './dealear/dealer.component';
 import { ButtonComponent } from './common/component/button/button.component';
+import { RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { ROUTES } from './app.routes';
 
 @NgModule({
   declarations: [
     AppComponent,
     DealerComponent,
-    ButtonComponent
+    ButtonComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(ROUTES, { useHash: true })
+
   ],
   providers: [],
   bootstrap: [AppComponent]

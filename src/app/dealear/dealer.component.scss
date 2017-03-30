@@ -1,4 +1,7 @@
 .dealer-container {
+  &:hover{
+    cursor: pointer;
+  }
   box-sizing: border-box;
   padding: 10px;
   border: 1px solid rosybrown;
