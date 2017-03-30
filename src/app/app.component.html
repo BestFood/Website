@@ -1,3 +1,5 @@
-<h1>
-  {{title}}
-</h1>
+<div class="dealer-container">
+  <app-dealer *ngFor=" let dealer of dealerList" [dealer]="dealer"></app-dealer>
+</div>
+
+<app-button [button]="button"></app-button>
