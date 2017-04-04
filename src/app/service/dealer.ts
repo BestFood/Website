@@ -21,4 +21,9 @@ export class DealerService {
     let body = res.json();
     return body || {};
   }
+
+  getDealer(id: number) {
+    return this.http.get(`/dealers/${id}`)
+      .map(this.extractData)
+  }
 }
