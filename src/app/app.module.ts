@@ -9,13 +9,16 @@ import { ButtonComponent } from './common/component/button/button.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ROUTES } from './app.routes';
+import { DealerService } from './service/dealer';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DealerComponent,
     ButtonComponent,
-    HomeComponent
+    HomeComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,7 @@ import { ROUTES } from './app.routes';
     RouterModule.forRoot(ROUTES, { useHash: true })
 
   ],
-  providers: [],
+  providers: [DealerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
